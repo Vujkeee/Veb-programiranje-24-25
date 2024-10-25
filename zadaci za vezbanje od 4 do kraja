@@ -1,0 +1,29 @@
+// #04
+example['novi primer'] = 'nova vrednost';
+console.log(example);
+
+// #05
+example.getValues = function() {
+    let values = [];
+    for (let key in example) {
+        values.push(example[key]);
+    }
+    return values;
+};
+
+// #06
+console.log(example.getValues());
+
+// #07
+Object.size = function(obj) {
+    let counter = 0;
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) counter++;
+    }
+    return counter;
+};
+
+console.log(Object.size(example));
+console.log(Object.size(ana));
+console.log(ana);
+                    
