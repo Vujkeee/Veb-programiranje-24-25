@@ -1,0 +1,97 @@
+
+<!--<!DOCTYPE html>//prvi
+<html>
+<head>
+<style type="text/css">
+#btn {
+background-color: #fff;
+border: 1px solid #000;
+width: 300px;
+height: 200px;
+text-align: center;           
+      line-height: 200px;           
+      cursor: pointer;
+      border: 1px solid #000;        
+}
+</style>
+</head>
+<body>
+<p id="btn">Promeni boju pozadine</p>
+<script>
+var el = document.getElementById('btn');
+
+function random(number) {
+return Math.floor( Math.random() * (number+1) );
+}
+function colorBackground() {
+document.getElementsByTagName('body')[0].style.backgroundColor = 'rgb('+
+random(255) + ', '+ random(255) + ','+ random(255) + ')';
+}
+el.addEventListener('click', colorBackground);
+</script>
+</body>
+</html>  -->
+
+<!--<!DOCTYPE html>//drugi
+<html>
+<head>
+<style type="text/css">
+#paragraf {
+background-color: #fff;
+border: 1px solid #000;
+width: 300px;}
+</style>
+</head>
+<body>
+<p>Primer upotrebe addEventListener metode koja dodaje paragrafu dva
+identična eventa, pri čemu će se izvršiti različite funkcije</p>
+<p id="paragraf">Oboji paragraf na klik i proširi ga</p>
+<script>
+var el = document.getElementById('paragraf');
+el.addEventListener('click', obojiParagraf);
+el.addEventListener('click', prosiriParagraf);
+function obojiParagraf() {
+this.style.backgroundColor = '#C70210';
+this.style.color = '#fff';
+alert('Prvi klik');
+}
+function prosiriParagraf() {
+this.style.width = '500px';
+alert('Drugi klik');
+}
+</script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+#paragraf {
+background-color: #fff;
+border: 1px solid #000;
+width: 300px;
+}
+</style>
+</head>
+<body>
+<p>Primer upotrebe addEventListener metode</p>
+<p id="paragraf">Oboji paragraf na klik i proširi ga</p>
+<script>
+var el = document.getElementById('paragraf');
+el.addEventListener('mouseover', obojiParagraf);
+el.addEventListener('click', prosiriParagraf);
+el.addEventListener('mouseout', promeniBoju);
+function obojiParagraf() {
+this.style.backgroundColor = '#C70210';
+this.style.color = '#fff';
+}
+function prosiriParagraf() {
+this.style.width = '500px';
+}
+function promeniBoju() {
+this.style.backgroundColor = '#347fe1';
+this.style.color = '#fff';
+}
+</script>
+</body>
+</html>
